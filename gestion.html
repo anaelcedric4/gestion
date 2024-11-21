@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>gestion de voyage</title>
+    <link rel="stylesheet" href="gestion.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('accueil')">Accueil</a>
+        <a href="#" onclick="showSection('publicite')">Publicité</a>
+        <a href="#" onclick="showSection('endroit')">Endroit magique</a>
+        <a href="#" onclick="showSection('reservation')">Reservation</a>
+        <a href="#" onclick="showSection('profil')">Profil</a>
+        <a href="#1" onclick="showSection('inscrire')">s'inscrire</a>
+    </div>
+
+    <div class="content">
+        <!--accueil-->
+        <div id="accueil" class="section active">
+            <div class="accueil-container">
+            <h1>Bienvenue chez RAC-V</h1>
+            <p>Découvrez les plus beaux endroits du mondeet réservez vos voyages en toutes simplicité</p>
+            <div class="button-container">
+                <a href="#" class="btn" onclick="showSection('reservation')">commencer</a>
+                <a href="#" class="btn-secondary" onclick="showSection('inscrire')">Inscrire</a>
+
+            </div>
+            
+            </div>
+                <div class="2acc">
+                    <p1><a href=""></a></p1>
+                </div>
+        </div>
+
+        <!--publicité-->
+        <div id="publicite" class="section">
+            <h1>ça peut vous interessez</h1>
+            <p>ceci est la section dediéé pour la publicité</p>
+        </div>
+
+        <!--les endroits magiques-->
+        <div id="endroit" class="section">
+            <h1>ça peut vous interessez</h1>
+            <p>decouvrez les endroit magiques</p>
+        </div>
+
+        <!--reservation-->
+        <div id="reservation" class="section">
+            <h1>voulez vous faire un reservation?</h1>
+            <p>on va vous aider</p>
+        <form action="" id="reservation-form">
+            <label for="nom">Nom :</label>
+            <input type="text" id="coplete" name = "nom" required>
+
+            <label for="prenom">Prénoms :</label>
+            <input type="text" id="complete" name = "prenom" required>
+
+            <label for="pays-origine">Pays d'origine :</label>
+            <input type="text" id="complete" name = "pays-origine" required>
+
+            <label for="destination">Destination :</label>
+            <input type="text" id="complete" name = "destination" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="complete" name = "email" required>
+
+            <label for="tel">telephone :</label>
+            <input type="tel" id="complete" name = "tel" required>
+
+            <button type="button" id="envoyer">Envoyer</button>
+            </form>
+             <!--fennetre modale pour entrer le mdp-->
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times,</span>
+                    
+                    <h2>confirmer la réservation</h2>
+                    <p>Veuillez entrer votre mot de passe pour confirmer :</p>
+                    <input type="password" id="mot-de-passe" placeholder="Mot de passe">
+
+                    <button type="button" id="confirmer">confirmer</button>
+                </div>
+            </div>
+
+            </div>
+
+           
+        </div>
+
+        <!--mon profil-->
+        <div id="profil" class="section">
+            <h1></h1>
+            <p1></p>
+
+            <div id="profil-non-inscrit">
+                <p>Si vous n'etes pas encore inscrit. S'inscrire<a href="#" id="inscription" onclick="showSection('inscrire')"> ici</a></p>
+            </div>
+
+            <div id="profil-inscrit">
+                <h2>votre profil</h2>
+                <img src="R.jpg" alt="">
+                <p><strong>Nom: </strong><span id="nom de l'utilisateur">RAMANAMPAMONJY Anaël Cédric</span></p>
+                <p><strong>Email: </strong><span id="email-utilisateur">anaelcedric4@gmail.com</span></p>
+            </div>
+        </div>
+
+        <!--s'inscrire-->
+        <div id="inscrire" class="section" >
+            
+        </div>
+        <script src="gestion.js"></script>
+    </div>
+</body>
+</html>
