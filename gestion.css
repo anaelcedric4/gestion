@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #41597c, #88d3ce);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: greenyellow;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    border: 2px solid rgb(114, 15, 15);
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    height: 100%;
+    border: 2px solid grey;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+.section {
+    display: none;
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+    opacity : 1;
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+}to {
+    opacity: 1;
+}
+}
+
+
+/*pour l'accueil seulement*/
+
+.accueil-container{
+    text-align: center;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.accueil-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.accueil-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7e5f;
+    padding: 15px 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #feb47b;
+    transform: translateY(-5px);
+}
+
+.btn-secondary {
+    color: blue;
+    text-decoration: none;
+
+
+}
+
+#profil {
+    max-width: 550px;
+    max-height: 600px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 420px;
+}
+
+
+#profil-inscrit img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#profil-inscrit p {
+    font-size: 1.2rem;
+    color: red;
+    display: flex;
+}
+
+#profil-non-inscrit a {
+    color: #dc6e24;
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid yellowgreen;
+    background-color: red;
+    padding: 5px 2px;
+}
+
+#profil-non-inscrit a:hover {
+    color: #514A9D;
+}
+
+
+
+
+/*reservation*/
+#reservation-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+#reservation-form label {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+#reservation-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font: bolder;
+}
+
+#reservation-form button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #24C6DC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#reservation-form button:hover {
+    background-color: #514A9D;
+}
+
+/*style de la fennetre modale*/
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    width: 80px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #24C6DC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.modal-content button:hover {
+    background-color: #514A9D;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
